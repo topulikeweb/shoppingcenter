@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?vd6k82');
+    src: url('../fonts/icomoon.eot?vd6k82#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?vd6k82') format('truetype'),
+        url('../fonts/icomoon.woff?vd6k82') format('woff'),
+        url('../fonts/icomoon.svg?vd6k82#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+/* 快捷导航模块 */
+.shortcut {
+    height: 31px;
+    background-color: #f1f1f1;
+}
+
+.f1 ul li {
+    float: left;
+}
+
+.f2 ul li {
+    float: right;
+}
+
+.f2 ul {
+    margin-top: 5px;
+}
+
+.f2 ul li {
+    height: 16px;
+    background-color: rgb(251, 252, 252);
+    border-right: 1px solid rgba(0, 0, 0, 0.516);
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 20px;
+}
+
+.head {
+    width: 1200px;
+    height: 100px;
+    background-color: rgb(248, 249, 249);
+    margin: auto;
+    position: relative;
+}
+
+.shopcar {
+    width: 175px;
+    height: 60px;
+    float: left;
+    position: absolute;
+    top: 20px;
+
+}
+
+.shopcar a {
+    display: block;
+    width: 175px;
+    height: 60px;
+    background-image: url("../img/logo.png");
+    background-repeat: no-repeat;
+    color: transparent;
+}
+
+.search {
+    width: 540px;
+    height: 35px;
+    background-color: rgb(255, 0, 0);
+    position: absolute;
+    left: 350px;
+    top: 25px;
+}
+
+.s2 {
+    width: 455px;
+    height: 33px;
+    background-color: #f1f1f1;
+    margin-left: 1px;
+    margin-top: 1px;
+}
+
+.a {
+    padding-top: 8px;
+    padding-left: 50px;
+}
+
+.s1 {
+    width: 82px;
+    height: 32px;
+    color: #f1f1f1;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.list ul li {
+    float: left;
+    margin-left: 20px;
+}
+
+.list ul {
+    margin-left: 350px;
+    padding-top: 70px;
+}
+
+.car {
+    width: 150px;
+    height: 36px;
+    background-image: url("../img/Snipaste_2022-07-08_14-14-51.png");
+    position: absolute;
+    right: 0;
+    top: 25px;
+}
+
+.ledtop {
+    width: 990px;
+    height: 50px;
+    background-color: rgb(252, 253, 253);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.ledtop ul li {
+    float: left;
+    padding-right: 50px;
+    font-size: 16px;
+    padding-top: 13px;
+}
+
+.ledtop ul {
+    padding-left: 35px;
+}
+
+.flex {
+    width: 65px;
+    height: 192px;
+    background-color: rgb(254, 253, 253);
+    position:absolute ;
+    left: 290px;
+    bottom: 630px;
+    display: none;
+}
+
+.flex ul li {
+    height: 32px;
+    width: 65px;
+    background-color: rgb(251, 253, 253);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.279);
+    text-align: center;
+    line-height: 32px;
+}

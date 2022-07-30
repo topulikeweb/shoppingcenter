@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>品优购-综合网购首选-正品低价、品质保障、配送及时、轻松购物！</title>
+    <meta name="description"
+        content="品优购JD.COM-专业的综合网上购物商城,销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!" />
+    <meta name="Keywords" content="网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,品优购" />
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="shortcut icon" href="bitbug_favicon.ico">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/list.css">
+    <script src="jQuery.js"></script>
+
+
+</head>
+<style>
+    .count {
+        width: 340px;
+        height: 140px;
+        position: absolute;
+        top: 300px;
+        left: 10px;
+    }
+
+    .count div {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        float: left;
+        font-size: 40px;
+        color: white;
+        font-weight: 700;
+        text-align: center;
+        line-height: 100px;
+        margin-right: 10px;
+    }
+
+    .text {
+        width: 340px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 650;
+        color: rgba(255, 0, 0, 0.59);
+        position: absolute;
+        top: 200px;
+    }
+
+    .timer {
+        width: 600px;
+        height: 200px;
+        background-color: rgb(245, 245, 249, 0);
+        position: absolute;
+        top: 0;
+        left: 650px;
+        z-index: 2;
+        font-size: 23px;
+        color: black;
+        font-weight: 600;
+        text-align: center;
+        display: none;
+    }
+</style>
+
+<body>
+    <!-- 秒杀倒计时 -->
+    <div class="text">秒杀倒计时</div>
+    <div class="count">
+        <div class="hour">1</div>
+        <div class="miunte">2</div>
+        <div class="second">3</div>
+    </div>
+
+    <script>
+        var hour = document.querySelector('.hour');
+        var miunte = document.querySelector('.miunte');
+        var secend = document.querySelector('.second');
+        var inputtime = +new Date('2022-8-23 12:00:00');//返回用户输入的时间的毫秒数
+        timer();
+
+        // 每过一秒调用这个函数
+        setInterval(timer, 1000);
+        function timer() {
+            var nowtime = +new Date();
+            // +表示转换为毫秒数
+            var times = (inputtime - nowtime) / 1000;
+            // 要转换为数字形式 因为var 的变量默认为字符串
+            var h = parseInt(times / 60 / 60);
+            // 三元表达式要有一个变量来接收，意思是等于号的左边被赋值；
+            h = h < 10 ? '0' + h : h;
+            // 将第一个盒子内容修改为h
+            hour.innerHTML = h;
+            var m = parseInt(times / 60 % 60);
+            m = m < 10 ? '0' + m : m;
+            miunte.innerHTML = m;
+            var s = parseInt(times % 60);
+            s = s < 10 ? '0' + s : s;
+            secend.innerHTML = s;
+        }
+    </script>
+    <!-- 让小恶魔跟随鼠标移动 -->
+    <style>
+        .mousepic {
+            position: absolute;
+            z-index: 0;
+            width: 70px;
+            height: 70px;
+            top: 2px;
+        }
+
+        .i img {
+            width: 50px;
+            height: 40px;
+            float: left;
+            position: relative;
+        }
+
+        body {
+            background-color: #fff;
+            font: 12px/1.5 'Microsoft YaHei', 'Heiti SC', tahoma, arial, 'Hiragino Sans GB', \\5B8B\4F53, sans-serif;
+            color: #666;
+            background-image: url("../img/jsbeijingtu1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <img class="mousepic" src="img/小恶魔gif.gif">
+    <script>
+        var mousepic = document.querySelector('.mousepic');
+
+        document.addEventListener('mousemove', function (event) {
+            var x = event.pageX;
+            var y = event.pageY;
+            mousepic.style.left = x + 'px';
+            mousepic.style.top = y + 'px';
+        })
+    </script>
+    <!-- 换背景 -->
+    <div class="i">
+        <ul>
+            <li><img src="../img/jsbeijingtu1.jpg"></li>
+            <li><img src="../img/jsbeijingtu2.jpg"></li>
+            <li><img src="../img/jsbeijingtu3.jpg"></li>
+            <li><img src="../img/jsbeijingtu4.jpg"></li>
+        </ul>
+    </div>
+    <script>
+        var pic = document.querySelector('.i').querySelectorAll('img');
+        for (var i = 0; i < pic.length; i++) {
+            pic[i].onclick = function () {
+                document.body.style.backgroundImage = "url(" + this.src + ")"
+            }
+        }
+    </script>
+    <div class="H5FullscreenPage-wrap">
+        <div class="item">
+            <section class="shortcut">
+                <div class="w">
+                    <div class="f1">
+                        <ul>
+                            <li>品优购欢迎您！&nbsp</li>
+                            <li><a href="#">请登录</a>&nbsp<a href="#" style="color:rgb(200, 22, 35) ;">免费注册</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="f2">
+                        <ul>
+                            <li><a href="#">我的订单</a></li>
+                            <li><a href="#">我的品优购</a>&nbsp<img src="img/xialajiantou.png"></li>
+                            <li><a href="#">品优购会员</a></li>
+                            <li><a href="#">企业采购</a></li>
+                            <li><a href="#">关注品优购</a>&nbsp<img src="img/xialajiantou.png"></li>
+                            <li><a href="#">客户服务</a>&nbsp<img src="img/xialajiantou.png"></li>
+                            <li><a href="#">网站导航</a>&nbsp<img src="img/xialajiantou.png"></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <header class="head">
+                <!-- logo模块 -->
+                <div class="shopcar">
+                    <h1>
+                        <a href="index.html" title="品优购，坑死你">品优购</a>
+                    </h1>
+                </div>
+
+                <div class="search">
+                    <div class="s2">
+                        <div class="a"><input type="text" style="border:none ;"></div>
+                    </div>
+                    <botton class="s1">搜索</botton>
+                </div>
+
+                <div class="list">
+                    <ul>
+                        <li><a href="#">优惠购首发</a></li>
+                        <li><a href="#">亿员优惠</a></li>
+                        <li><a href="#">9.9团购</a></li>
+                        <li><a href="#">满99坑100</a></li>
+                        <li><a href="#">办公用品</a></li>
+                        <li><a href="#">破电脑</a></li>
+                        <li><a href="#">通信</a></li>
+                    </ul>
+                </div>
+                <div class="car"></div>
+            </header>
+
+            <div class="timer">还有5秒跳转页面</div>
+
+            <nav class="box">
+                <div class="aside">
+                    <ul>
+                        <li><a href="#">家用电器</a></li>
+                        <li id="ph"><a href="#">手机，数码，通信</a></li>
+                        <li><a href="#">电脑，办公</a></li>
+                        <li><a href="#">家具，家居，家装，厨具</a></li>
+                        <li><a href="#">男装，女装，童装，内衣</a></li>
+                        <li><a href="#">清洁用品，宠物</a></li>
+                        <li><a href="#">破电脑，烂手机，旧冰箱</a></li>
+                        <li><a href="#">蟑螂药，老鼠药</a></li>
+                        <li><a href="#">菠萝手机，苹果手机，老王手机</a></li>
+                        <li><a href="#">玩具</a></li>
+                        <li><a href="#">图书，电子书</a></li>
+                        <li><a href="#">高利贷，超高利贷</a></li>
+                        <li><a href="#">中一百万的彩票，中百万的彩票</a></li>
+                        <li><a href="#">理财，理个屁</a></li>
+                        <li><a href="#">坑死你专区</a></li>
+                    </ul>
+                </div>
+                <div class="led">
+                    全部商品分类
+                </div>
+
+                <div class="ledtop">
+                    <ul>
+                        <li><a href="#">服装城</a></li>
+                        <li><a href="#">美妆馆</a></li>
+                        <li><a href="#">传智超市</a></li>
+                        <li><a href="#">全球购</a></li>
+                        <li><a href="#">闪购</a></li>
+                        <li><a href="#">团购</a></li>
+                        <li><a href="#">拍卖</a></li>
+                        <li><a href="#">有趣</a></li>
+                    </ul>
+                </div>
+                <div class="pic">
+                    <ul>
+                        <li>
+                            <img src="img/focus.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="img/focus1.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="img/focus2.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="img/focus3.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="img/focus.jpg" alt="">
+                        </li>
+                    </ul>
+                    <div class="prev">
+                        <a hert="#"></a>
+                    </div>
+                    <div class="next">
+                        <a href="#">&lt</a>
+                    </div>
+
+                    <ol class="circle">
+                    </ol>
+                </div>
+                
+                <div class="fly">
+                    <div class="title">
+                        <div class="news">品优购快报</div>
+                        <div class="more"><a hert="">更多&gt</a></div>
+                    </div>
+                    <ul class="tehui">
+                        <li><a href="#">【特惠】爆款耳机5折秒!</a></li>
+                        <li><a href="#">【特惠】母亲节,健康好礼低至5折!</a></li>
+                        <li><a href="#">【特惠】爆款耳机5折秒!</a></li>
+                        <li><a href="#">【特惠】9.9元洗100张照片!</a></li>
+                        <li><a href="#">【特惠】长虹智能空调立省1000</a></li>
+                    </ul>
+                </div>
+
+                <div class="plane">
+                    <ul>
+                        <li><a href="#">机票</a></li>
+                        <li><a href="#">机票</a></li>
+                        <li><a href="#">机票</a></li>
+                        <li><a href="#">机票</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">机票</a></li>
+                        <li><a href="#">机票</a></li>
+                        <li><a href="#">机票</a></li>
+                        <li><a href="#">机票</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">机票</a></li>
+                        <li><a href="#">机票</a></li>
+                        <li><a href="#">机票</a></li>
+                        <li><a href="#">机票</a></li>
+                    </ul>
+                </div>
+                <div class="pic2"></div>
+
+                <div class="clock">今日推荐</div>
+                <div class="tuijian">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="flex">
+                <ul>
+                    <li>家用电器</li>
+                    <li class="h"><a herf="">手机通讯</a></li>
+                    <li><a herf="">电脑维修</a></li>
+                    <li><a herf="">二手转卖</a></li>
+                    <li><a herf="">技术检查</a></li>
+                </ul>
+            </div>
+          </div>
+      </div>
+
+
+            </script>
+            <!-- 下面手机部分 -->
+            <div class="bigbox">
+                <ul class="object">
+                    <li>￥5100,IPhone12强的很</li>
+                    <li>￥5100,IPhone12强的很</li>
+                    <li>￥5100,IPhone12强的很</li>
+                    <li>￥5100,IPhone12强的很</li>
+                </ul>
+                <ul class="object">
+                    <li>￥5100,IPhone12强的很</li>
+                    <li>￥5100,IPhone12强的很</li>
+                    <li>￥5100,IPhone12强的很</li>
+                    <li>￥5100,IPhone12强的很</li>
+                </ul>
+                <ul class="object">
+                    <li>￥5100,IPhone12强的很</li>
+                    <li>￥5100,IPhone12强的很</li>
+                    <li>￥5100,IPhone12强的很</li>
+                    <li>￥5100,IPhone12强的很</li>
+                </ul>
+
+
+
+            </div>
+        </div>
+        <script src="js/lunbotu.js"></script>
+        
+</body>
+
+</html>
